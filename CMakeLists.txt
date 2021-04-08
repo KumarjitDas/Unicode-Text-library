@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 3.7)
+
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+
+option(BUILD_SHARED_LIBS "Build the project with shared libraries." True)
+
+project("UniText" VERSION 0.1 LANGUAGES C)
+
+set(VALID_BUILD_TYPES "Release" "Debug" "MinSizeRel" "RelWithDebInfo")
+
+if(NOT CMAKE_CONFIGURATION_TYPES)
+	if("${CMAKE_BUILD_TYPE}" STREQUAL "")
+		set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Build configuration" FORCE)
+	endif()
+
+	list(FIND VALID_BUILD_TYPES "${CMAKE_BUILD_TYPE}" INDEX)
+
+	if(${INDEX} MATCHES -1)
+		message(FATAL_ERROR "Invalid build type. Valid build types are: ${VALID_BUILD_TYPES}")
+	endif()
+
+	if(DEFINED CMAKE_BUILD_TYPE)
+		set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS ${VALID_BUILD_TYPES})
+	endif()
+endif()
+
+add_subdirectory("UniText")
+add_subdirectory("Examples")

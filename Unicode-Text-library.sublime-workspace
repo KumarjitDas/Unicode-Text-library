@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"Hello",
+				"HelloUniText"
+			],
+			[
+				"PROJECT",
+				"PROJECT_NAME\tbuiltin variable"
+			],
+			[
 				"target_link",
 				"target_link_libraries\tbuiltin"
 			],
@@ -40,7 +48,7 @@
 	"buffers":
 	[
 	],
-	"build_system": "",
+	"build_system": "Packages/User/CMake.sublime-build",
 	"build_system_choices":
 	[
 		[
@@ -168,7 +176,7 @@
 			],
 			[
 				"Packages/User/CMake.sublime-build",
-				"Build project"
+				"Configure and generate project"
 			]
 		],
 		[
@@ -208,8 +216,60 @@
 		"selected_items":
 		[
 			[
+				"package control dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"package control ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"package control dia",
+				"Package Control: Disable Package"
+			],
+			[
+				"pacakge ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"pacakge dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"pacakge insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pacakge control ena",
+				"Package Control: Enable Package"
+			],
+			[
+				"pacakge control",
+				"Package Control: Install Package"
+			],
+			[
+				"pacakg dis",
+				"Package Control: Disable Package"
+			],
+			[
 				"package",
 				"Package Control: Install Package"
+			],
+			[
+				"pacakge",
+				"Package Control: List Packages"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"pacakgelis",
+				"Package Control: List Packages"
+			],
+			[
+				"package dis",
+				"Package Control: Disable Package"
 			],
 			[
 				"install",
@@ -236,10 +296,6 @@
 				"LSP: Restart Servers"
 			],
 			[
-				"package control",
-				"Package Control: List Packages"
-			],
-			[
 				"lsp",
 				"LSP: Enable Language Server Globally"
 			],
@@ -254,10 +310,6 @@
 			[
 				"packge control",
 				"Package Control: List Packages"
-			],
-			[
-				"package dis",
-				"Package Control: Disable Package"
 			],
 			[
 				"package control insta",
@@ -307,13 +359,35 @@
 	],
 	"file_history":
 	[
-		"/D/Repository/Unicode-Text-library/Unicode-Text-library.sublime-project",
-		"/D/Repository/Unicode-Text-library/README.md",
-		"/D/Repository/Unicode-Text-library/.gitattributes",
-		"/D/Repository/Unicode-Text-library/LICENSE",
 		"/D/Repository/Unicode-Text-library/.gitignore",
-		"/D/Development/Assembly/Help/NASM-compile-command.txt",
+		"/D/Repository/Unicode-Text-library/Examples/example_01.c",
+		"/D/Repository/Unicode-Text-library/UniText/include/UniText/UniText.h",
+		"/D/Repository/Unicode-Text-library/UniText/include/CMakeLists.txt",
+		"/D/Repository/Unicode-Text-library/UniText/src/UniText/UniText.c",
+		"/D/Repository/Unicode-Text-library/Build/UniText/unitext_export.h",
+		"/D/Repository/Unicode-Text-library/Build/CMakeFiles/3.20.0-rc4/CompilerIdC/CMakeCCompilerId.c",
+		"/D/Repository/Unicode-Text-library/Build/UniText.sln",
+		"/D/Repository/Unicode-Text-library/UniText/CMakeLists.txt",
+		"/D/Repository/Unicode-Text-library/Unicode-Text-library.sublime-project",
+		"/D/Development/C/cmake-test/examples/main.c",
+		"/D/Repository/Unicode-Text-library/Examples/CMakeLists.txt",
+		"/D/Development/C/cmake-test/examples/CMakeLists.txt",
+		"/D/Repository/Unicode-Text-library/UniText/include/UniText/CMakeLists.txt",
+		"/D/Repository/Unicode-Text-library/UniText/src/UniText/CMakeLists.txt",
+		"/D/Development/C/cmake-test/cmake-test/src/cmake-test/hello.c",
+		"/D/Development/C/cmake-test/cmake-test/src/cmake-test/CMakeLists.txt",
+		"/D/Repository/Unicode-Text-library/UniText/src/CMakeLists.txt",
+		"/D/Development/C/cmake-test/cmake-test/src/CMakeLists.txt",
+		"/D/Development/C/cmake-test/cmake-test/include/cmake-test/hello.h",
+		"/D/Development/C/cmake-test/cmake-test/include/cmake-test/CMakeLists.txt",
+		"/D/Development/C/cmake-test/cmake-test/include/CMakeLists.txt",
+		"/D/Repository/Unicode-Text-library/CMakeLists.txt",
+		"/D/Development/C/cmake-test/cmake-test/CMakeLists.txt",
+		"/D/Repository/Unicode-Text-library/.gitattributes",
 		"/D/Development/C/cmake-test/CMakeLists.txt",
+		"/D/Repository/Unicode-Text-library/README.md",
+		"/D/Repository/Unicode-Text-library/LICENSE",
+		"/D/Development/Assembly/Help/NASM-compile-command.txt",
 		"/D/dev/c/cmake-test/CMakeLists.txt",
 		"/D/dev/c/cmake-test/cmake-test/src/cmake-test/hello.c",
 		"/D/dev/c/cmake-test/cmake-test/include/cmake-test/hello.h",
@@ -371,7 +445,7 @@
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 27.0
 	},
 	"find_in_files":
 	{
@@ -385,6 +459,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"cmake-test",
+			"example",
+			"cmake-test",
+			"HELL_H",
+			"UniText",
+			"unitext",
+			"UniText",
+			"cmake-test",
+			"CMAKE_CONFIGURATION_TYPES",
+			"cmake-test"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -438,6 +522,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.ECC":
+	{
+		"height": 127.0
+	},
 	"output.SublimeLinter":
 	{
 		"height": 127.0
@@ -466,7 +554,7 @@
 	"project": "Unicode-Text-library.sublime-project",
 	"replace":
 	{
-		"height": 71.0
+		"height": 50.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -504,7 +592,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 221.0,
+	"side_bar_width": 198.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
