@@ -1,7 +1,36 @@
-#include "UniText/UniText.h"
+#include "UniText/UTF8.h"
+
+#include <stdio.h>
+
 
 int main()
 {
-	HelloUniText();
+	uint8_t byteArray1[] = {'A',                 'B',                 'C',            'D',       'E'};
+	uint8_t byteArray2[] = {0xC1,0x83,           0xC6,0x86,           0xC8,0x88,      0xD0,0xA0};
+	uint8_t byteArray3[] = {0xE4,0x83,0xA0,      0xE2,0x86,0x83,      0xE1,0x88,0x86};
+	uint8_t byteArray4[] = {0xF2,0x83,0xA0,0x88, 0xF1,0x86,0x83,0xA0};
+	uint8_t byteArray5[] = {0xC1,0x83, 0xF2,0x83,0xA0,0x88, 0xE4,0x83,0xA0, 'A', 'B', 'C', 
+							0xE2,0x86,0x83, 0xE1,0x88,0x86, 0xC6,0x86, 'D', 0xC8,0x88, 
+							0xD0,0xA0, 0xF1,0x86,0x83,0xA0, 'E'
+						   };
+	uint8_t byteArray6[] = {0xC1,0x83, 0xF2,0x83,0xA0,0x88, 0xE4,0x83,0xA0, 'A', 'B', 'C', 
+							0x86,0x86,0x83, 0xE1,0x88,0x86, 0xC6,0x86, 'D', 0xC8,0x88, 
+							0xD0,0xA0, 0xF1,0x86,0x83,0xC1, 'E'
+						   };
+
+	printf("Character count 1: %u\n"
+		   "Character count 2: %u\n"
+		   "Character count 3: %u\n"
+		   "Character count 4: %u\n"
+		   "Character count 5: %u\n"
+		   "Character count 6: %u\n",
+		   UniText_UTF8_CountCharacters(byteArray1, sizeof(byteArray1), 0),
+		   UniText_UTF8_CountCharacters(byteArray2, sizeof(byteArray2), 0),
+		   UniText_UTF8_CountCharacters(byteArray3, sizeof(byteArray3), 0),
+		   UniText_UTF8_CountCharacters(byteArray4, sizeof(byteArray4), 0),
+		   UniText_UTF8_CountCharacters(byteArray5, sizeof(byteArray5), 0),
+		   UniText_UTF8_CountCharacters(byteArray6, sizeof(byteArray6), 1)
+		  );
+
 	return 0;
 }

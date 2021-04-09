@@ -27,7 +27,7 @@ set_target_properties(
 include("GenerateExportHeader")
 generate_export_header("${PROJECT_NAME}")
 install(
-	FILES 		"${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_export.h"
+	FILES 		"${CMAKE_CURRENT_BINARY_DIR}/unitext_export.h"
 	DESTINATION	"include"
 )
 

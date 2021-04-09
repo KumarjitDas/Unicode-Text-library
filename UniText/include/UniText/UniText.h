@@ -2,7 +2,6 @@
 #define UNITEXT_H
 
 #include "UniText_export.h"
-
-void UNITEXT_EXPORT HelloUniText();
+#include "UTF8.h"
 
 #endif	// UNITEXT_H
