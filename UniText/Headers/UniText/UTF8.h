@@ -2,7 +2,7 @@
 #define UTF8_H
 
 
-#include "unitext_export.h"
+#include "Export.h"
 #include <stdint.h>
 
 

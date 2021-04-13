@@ -1,9 +1,9 @@
 add_library("${PROJECT_NAME}" "")
-add_library(unitext::unitext ALIAS "${PROJECT_NAME}")
+add_library(UniText::unitext ALIAS "${PROJECT_NAME}")
 
 target_include_directories(
 	"${PROJECT_NAME}"	PUBLIC
-	"$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
+	"$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/Headers>"
 	"$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>"
 	"$<INSTALL_INTERFACE:include>"
 )
@@ -18,6 +18,7 @@ endif()	# End of BUILD_SHARED_LIBS
 
 set_target_properties(
 	"${PROJECT_NAME}" 		PROPERTIES
+	OUTPUT_NAME 			"unitext"
 	DEBUG_POSTFIX 			"${STATIC_POSTFIX}-d"
 	RELEASE_POSTFIX 		"${STATIC_POSTFIX}"
 	MINSIZEREL_POSTFIX 		"${STATIC_POSTFIX}-mr"
@@ -26,10 +27,14 @@ set_target_properties(
 
 include("GenerateExportHeader")
 generate_export_header("${PROJECT_NAME}")
+file(
+	RENAME "${CMAKE_CURRENT_BINARY_DIR}/unitext_export.h" 
+	"${CMAKE_CURRENT_SOURCE_DIR}/Headers/${PROJECT_NAME}/Export.h"
+)
 install(
-	FILES 		"${CMAKE_CURRENT_BINARY_DIR}/unitext_export.h"
+	FILES 		"${CMAKE_CURRENT_SOURCE_DIR}/Headers/${PROJECT_NAME}/Export.h"
 	DESTINATION	"include"
 )
 
-add_subdirectory("include")
-add_subdirectory("src")
+add_subdirectory("Headers")
+add_subdirectory("Sources")
