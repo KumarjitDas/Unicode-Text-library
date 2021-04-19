@@ -1,16 +1,8 @@
 set(
 	SOURCE_FILES 
-	"${CMAKE_CURRENT_SOURCE_DIR}/UniText.c"
-	"${CMAKE_CURRENT_SOURCE_DIR}/UTF8.c"
-	"${CMAKE_CURRENT_SOURCE_DIR}/Utility.h"
-	"${CMAKE_CURRENT_SOURCE_DIR}/Utility.c"
+	"${CMAKE_CURRENT_SOURCE_DIR}/unitext.c"
 )
-set(SUBDIRECTORIES "")
-set(RELATIVE_PATH "src/UniText")
-
-foreach(VAR ${SUBDIRECTORIES})
-	add_subdirectory(${VAR})
-endforeach()
+set(RELATIVE_PATH "src/unitext")
 
 if(SOURCE_FILES)
 	target_sources("${PROJECT_NAME}" PRIVATE ${SOURCE_FILES})

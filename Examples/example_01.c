@@ -1,7 +1,6 @@
-#include "UniText/UTF8.h"
+#include "utf8/utf8.h"
 
 #include <stdio.h>
-
 
 int main()
 {
@@ -24,12 +23,12 @@ int main()
 		   "Character count 4: %u\n"
 		   "Character count 5: %u\n"
 		   "Character count 6: %u\n",
-		   UniText_UTF8_CountCharacters(byteArray1, sizeof(byteArray1), 0),
-		   UniText_UTF8_CountCharacters(byteArray2, sizeof(byteArray2), 0),
-		   UniText_UTF8_CountCharacters(byteArray3, sizeof(byteArray3), 0),
-		   UniText_UTF8_CountCharacters(byteArray4, sizeof(byteArray4), 0),
-		   UniText_UTF8_CountCharacters(byteArray5, sizeof(byteArray5), 0),
-		   UniText_UTF8_CountCharacters(byteArray6, sizeof(byteArray6), 1)
+		   UTF8CountCharactersEncoded(byteArray1, sizeof(byteArray1), 0),
+		   UTF8CountCharactersEncoded(byteArray2, sizeof(byteArray2), 0),
+		   UTF8CountCharactersEncoded(byteArray3, sizeof(byteArray3), 0),
+		   UTF8CountCharactersEncoded(byteArray4, sizeof(byteArray4), 0),
+		   UTF8CountCharactersEncoded(byteArray5, sizeof(byteArray5), 0),
+		   UTF8CountCharactersEncoded(byteArray6, sizeof(byteArray6), 1)
 		  );
 
 	return 0;

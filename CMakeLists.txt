@@ -4,9 +4,11 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Libraries")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Libraries")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/Binaries")
 
-option(BUILD_SHARED_LIBS "Build the project with shared libraries." True)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
 
-project("UniText" VERSION 0.1 LANGUAGES C)
+option(BUILD_SHARED_LIBS "Build the project with shared libraries." ON)
+
+project("UniText" VERSION 0.0.1 LANGUAGES C)
 
 set(VALID_BUILD_TYPES "Release" "Debug" "MinSizeRel" "RelWithDebInfo")
 

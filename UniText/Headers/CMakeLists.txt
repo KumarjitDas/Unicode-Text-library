@@ -1,13 +1,5 @@
-set(SOURCE_FILES "")
-set(SUBDIRECTORIES "UniText")
-set(RELATIVE_PATH "include")
+set(SUBDIRECTORIES "unitext" "ucs2" "ucs4" "utf8" "utf16" "utf32" "common")
 
 foreach(VAR ${SUBDIRECTORIES})
 	add_subdirectory(${VAR})
 endforeach()
-
-if(SOURCE_FILES)
-	target_sources("${PROJECT_NAME}" PRIVATE ${SOURCE_FILES})
-
-	install(FILES ${SOURCE_FILES} DESTINATION ${RELATIVE_PATH})
-endif()

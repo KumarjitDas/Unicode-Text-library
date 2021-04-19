@@ -1,8 +1,8 @@
 set(
 	SOURCE_FILES 
-	"${CMAKE_CURRENT_SOURCE_DIR}/unitext.h"
+	""
 )
-set(RELATIVE_PATH "include/unitext")
+set(RELATIVE_PATH "src/ucs2")
 
 if(SOURCE_FILES)
 	target_sources("${PROJECT_NAME}" PRIVATE ${SOURCE_FILES})
