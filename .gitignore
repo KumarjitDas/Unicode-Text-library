@@ -58,5 +58,5 @@ build/*
 .cache/*
 
 # Workspace
-*.sublime-workspace
+*.sublime-project
 *.sublime-workspace
